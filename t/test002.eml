@@ -1,0 +1,16 @@
+Date: Thu, 09 Jan 2014 19:08:15 +0100
+From: bob@test.com
+To: alice@test.com
+Subject: Basic single-part text MIME message
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ascii
+
+This email is quite plain, but it's a MIME text part.
+
+
+
+A few consecutive empty lines should be stripped. And the
+signature below should disappear.
+
+--
+LoL Signature

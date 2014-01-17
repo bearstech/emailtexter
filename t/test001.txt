@@ -1,0 +1,4 @@
+This email is the plainest one, without any MIME formatting.
+
+A few consecutive empty lines should be stripped. And the
+signature below should disappear.

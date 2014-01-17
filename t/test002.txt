@@ -1,0 +1,4 @@
+This email is quite plain, but it's a MIME text part.
+
+A few consecutive empty lines should be stripped. And the
+signature below should disappear.

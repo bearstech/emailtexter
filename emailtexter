@@ -1,0 +1,15 @@
+#!/usr/bin/perl
+
+# Debian deps: libemail-mime libhtml-strip-perl
+use strict;
+use warnings;
+use Email::Texter;
+use open ':locale';
+
+# Slurp email from stdin
+my $source = do { local $/; <STDIN> };
+my $email = Email::MIME->new($source);
+
+print "Email in :\n", $email->debug_structure, "\n";
+email_texter($email);
+print "Email out:\n", $email->debug_structure;

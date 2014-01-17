@@ -1,0 +1,405 @@
+Return-Path: <mpiacentini@google.com>
+X-Original-To: vincent@zerodeux.net
+Delivered-To: zerodeux@boo.zerodeux.net
+Received: from mail-ea0-f177.google.com (mail-ea0-f177.google.com [209.85.215.177])
+	by boo.zerodeux.net (Postfix) with ESMTPS id F162F13A04CA
+	for <vincent@zerodeux.net>; Wed,  9 Oct 2013 00:04:15 +0200 (CEST)
+Received: by mail-ea0-f177.google.com with SMTP id f15so4184347eak.8
+        for <vincent@zerodeux.net>; Tue, 08 Oct 2013 15:04:15 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20120113;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+         :content-type;
+        bh=OCUwLK81l+HCsuMtPTUPAgoGAU0NtHxE5AJSjnOXHGU=;
+        b=C6uYsFrjt7OhbSJh8CuCwb7kdTl+tNZ0Z9ca9fYVStJ9YaNi+DjI7ZugtFKEMyCt73
+         clY8wi+3c0uLASKmSqpiqu+3aUHSUkEFwKazTqsnXcAaWgfgBzf2EZIA+avEjo5orYzD
+         r29q8+9k4mhgbILf4L9+GRCsNae5EZjhDCSV/qdtQNEnZQXOiHn2z0TbeslUZ3jeBjdk
+         AsFJZdrQHM8gc75t0IOoEcj548f7oWOglVI4N4fFX3E0M5x/THQM8IuM+oIh/wWWTlnF
+         o6WaLM0ruZK/7dUnbCYrbg0uNMT5EU+ixKOrXiDjHU+XPy15CbzY/3oavccOIHaka77u
+         sDTA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to:content-type;
+        bh=OCUwLK81l+HCsuMtPTUPAgoGAU0NtHxE5AJSjnOXHGU=;
+        b=Th1VyCLBHVBQCRevq477ICe8JPz4/LQmxkwoRoGWvxR36fpDq+iSlrZDqNXn3ROHmm
+         UUozAwUz7rsf6RVu+JscvQoxHOMzRzAN4ePJFfn63/9ggpM4wIwo6oMxiDQibuHoGIJe
+         ggiCkD21weGNiLkjfybRolEULYioZy/pzWUCCICyJCeGX9EOXOpeafGJhToESvQGa/du
+         tTrk3ZL/GHgASzMwB0C8uG3uAhDEofJY+hfe4uip6N2YTido4D59fJq1Xwh3ScfcWeZU
+         f+3KE/QMsqKzsbkQXeYsN9lWQuCIdUaFfAG01mDnDC5fDxxogce+jjK+0l3ruogAAaGM
+         a1oQ==
+X-Gm-Message-State: ALoCoQmB/hKBxOKXFzx8031eamw2adr9XpKa1345d6mV7WcVT6q+2ED2aoPzMLE/gU8QLvSEapksGJ959nhMa7v+vhr996SENbTfipAs1PhnSy3RZyKAJqGrvXPIfKH7WlxvYxXnV7MN3fDwae42zwroeNK/gMjel4fi9h8+4Grl4nUl+rujvoAaCLTwptJVApFfJpDqDuSXX+/JZ7XoTGGgZxY3Z+jPlY6ApPo6mRgDCvzfekaxkzfk8+4cxLZXbQRPpQx21xYt58Rm+T9KKQLqs91bBdIgW0h0ocxyYwW9Fau+5pvDV5A=
+X-Received: by 10.15.83.2 with SMTP id b2mr5938889eez.28.1381269855519; Tue,
+ 08 Oct 2013 15:04:15 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.14.47.66 with HTTP; Tue, 8 Oct 2013 15:03:55 -0700 (PDT)
+In-Reply-To: <5254762D.6030501@zerodeux.net>
+References: <CAO8=n_PAkfd1PkmBS_8Awz6PdW5NqYju9crnrY6A3F8tcLeKaw@mail.gmail.com>
+ <5254762D.6030501@zerodeux.net>
+From: Maximilian Piacentini <mpiacentini@google.com>
+Date: Tue, 8 Oct 2013 23:03:55 +0100
+Message-ID: <CAO8=n_OuqQLYBj7=MxMLsPJjP3X0r4LTe69maHiP30UHr3CYzQ@mail.gmail.com>
+Subject: Re: Development @ Google
+To: Vincent Caron <vincent@zerodeux.net>
+Content-Type: multipart/alternative; boundary=089e0160bc92140d3004e841f3f4
+
+--089e0160bc92140d3004e841f3f4
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+Hello Vincent,
+
+Thanks for getting back to me.
+
+I'll be open, below are the roles that I cover:
+
+
+   - Job description for
+Managers<https://www.google.com/about/jobs/search/#!t=3Djo&jid=3D45025&>
+    and System Engineers<https://www.google.com/about/jobs/search/#!t=3Djo&=
+jid=3D45093&>
+   , Software Engineers<https://www.google.com/about/jobs/search/#!t=3Djo&j=
+id=3D32152&>
+in
+   SRE
+   - Video from Google
+I/O<http://www.google.com/events/io/2011/sessions/life-in-app-engine-produc=
+tion.html>:
+   an SRE from our AppEngine team (sorry it's quite long)
+   - Video from an SRE from our Google Talk
+team<http://www.youtube.com/watch?v=3Dy31STIrwtlk> (this
+   team is partly based in London)
+   - A slide deck<http://www.ukuug.org/events/spring2007/programme/ThatCoul=
+dntHappenToUs.pdf>
+from
+   one of our Site Reliability Managers in Dublin
+   - Reddit Blog- What do SRE's
+do?<http://www.reddit.com/r/IAmA/comments/177267/we_are_the_google_site_rel=
+iability_team_we_make/>
+
+
+
+Site Reliability Engineers =97 Keeping Google up and running
+24/7<http://www.youtube.com/watch?v=3DyXI7r0_J29M>
+
+Let me know if they could be of interest and we could perhaps set up a call=
+?
+
+Regards,
+
+Max
+--=20
+Maximillian Piacentini | Technical Sourcer | mpiacentini@google.com | +353
+1 519 7645
+
+Technical Staffing Google
+Google Ireland Ltd.,1 Grand Canal Plaza, Lower Grand Canal Street, Dublin
+4, Ireland
+Registered in Dublin, Ireland
+Registration Number: 368047
+Join me on Linkedin<http://ie.linkedin.com/pub/maximillian-piacentini/7/b2/=
+ab5/>
+
+<https://www.youtube.com/watch?feature=3Dplayer_embedded&v=3DocuqL_dhrBI>
+
+
+Working at Google, Dublin
+Ireland<https://www.youtube.com/watch?v=3Dzrb6edmE5Kg&feature=3Dplayer_embe=
+dded>
+Google=92s New Office In
+Dublin<http://www.home-designing.com/2013/02/googles-new-office-in-dublin>
+Working at Google, London UK. <http://www.youtube.com/watch?v=3D9-RoxxBE2Zg=
+>
+Working at Google, Munich Germany.<http://www.youtube.com/watch?v=3DE7PQJBi=
+i4DQ>
+Working at Google, Zurich
+Switzerland.<http://www.youtube.com/watch?v=3DPjf2Qk_aI2M>
+YouTube - Videos from this email
+
+
+
+On Tue, Oct 8, 2013 at 10:16 PM, Vincent Caron <vincent@zerodeux.net> wrote=
+:
+
+> On 30/09/2013 11:17, Maximilian Piacentini wrote:
+> > Hi Vincent,
+> >
+> > I previously sent an email to you with regards to opportunities at
+> > Google and was unsure if you did not receive it due to overactive spam
+> > filters!
+> >
+> > I am reaching out again in case you missed the email and were keen to
+> > have an initial conversation regarding opportunities for our engineerin=
+g
+> > team.
+>
+> Hello,
+>
+>   your email did fell in my spam trap, I just found it during my weekly
+> spam triaging...
+>
+>   I'm currently employed, but still curious about the kind of
+> opportunity you would like to talk about.
+>
+>   Sincerely,
+>
+>   Vincent
+>
+
+
+
+--=20
+Maximillian Piacentini | Technical Sourcer | mpiacentini@google.com | +353
+1 519 7645
+
+Technical Staffing Google
+Google Ireland Ltd.,1 Grand Canal Plaza, Lower Grand Canal Street, Dublin
+4, Ireland
+Registered in Dublin, Ireland
+Registration Number: 368047
+Join me on Linkedin<http://ie.linkedin.com/pub/maximillian-piacentini/7/b2/=
+ab5/>
+
+<https://www.youtube.com/watch?feature=3Dplayer_embedded&v=3DocuqL_dhrBI>
+
+
+Working at Google, Dublin
+Ireland<https://www.youtube.com/watch?v=3Dzrb6edmE5Kg&feature=3Dplayer_embe=
+dded>
+Google=92s New Office In
+Dublin<http://www.home-designing.com/2013/02/googles-new-office-in-dublin>
+Working at Google, London UK. <http://www.youtube.com/watch?v=3D9-RoxxBE2Zg=
+>
+Working at Google, Munich Germany.<http://www.youtube.com/watch?v=3DE7PQJBi=
+i4DQ>
+Working at Google, Zurich
+Switzerland.<http://www.youtube.com/watch?v=3DPjf2Qk_aI2M>
+YouTube - Videos from this email
+
+--089e0160bc92140d3004e841f3f4
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hello Vincent,<div><br></div><div>Thanks for getting back =
+to me.</div><div><br></div><div>I&#39;ll be open, below are the roles that =
+I cover:</div><div><br></div><div><div dir=3D"ltr"><div style=3D"font-famil=
+y:arial,sans-serif;font-size:13px">
+
+<div class=3D"gmail_quote"><ul style=3D"font-family:arial,helvetica,sans-se=
+rif"><li style=3D"margin-left:15px">Job description for=A0<a href=3D"https:=
+//www.google.com/about/jobs/search/#!t=3Djo&amp;jid=3D45025&amp;" target=3D=
+"_blank">Managers</a>=A0and=A0<a href=3D"https://www.google.com/about/jobs/=
+search/#!t=3Djo&amp;jid=3D45093&amp;" target=3D"_blank">System Engineers</a=
+>,=A0<a href=3D"https://www.google.com/about/jobs/search/#!t=3Djo&amp;jid=
+=3D32152&amp;" target=3D"_blank">Software Engineers</a>=A0in SRE<br>
+
+
+</li><li style=3D"margin-left:15px"><a href=3D"http://www.google.com/events=
+/io/2011/sessions/life-in-app-engine-production.html" target=3D"_blank">Vid=
+eo from Google I/O</a>: an SRE from our AppEngine team (sorry it&#39;s quit=
+e long)</li>
+
+
+<li style=3D"margin-left:15px"><a href=3D"http://www.youtube.com/watch?v=3D=
+y31STIrwtlk" target=3D"_blank">Video from an SRE from our Google Talk team<=
+/a>=A0(this team is partly based in London)</li><li style=3D"margin-left:15=
+px"><a href=3D"http://www.ukuug.org/events/spring2007/programme/ThatCouldnt=
+HappenToUs.pdf" target=3D"_blank">A slide deck</a>=A0from one of our Site R=
+eliability Managers in Dublin</li>
+
+
+<li style=3D"margin-left:15px"><a href=3D"http://www.reddit.com/r/IAmA/comm=
+ents/177267/we_are_the_google_site_reliability_team_we_make/" style=3D"font=
+-family:arial" target=3D"_blank">Reddit Blog- What do SRE&#39;s do?</a><br>=
+</li>
+
+
+</ul><div><font face=3D"arial, helvetica, sans-serif"><br></font></div><div=
+><font face=3D"arial, helvetica, sans-serif"><br></font></div></div></div><=
+div style=3D"font-family:arial,sans-serif;font-size:13px"><div style=3D"fon=
+t-size:12.727272033691406px">
+
+
+<span style=3D"border-collapse:collapse"><div dir=3D"ltr"><a href=3D"http:/=
+/www.youtube.com/watch?v=3DyXI7r0_J29M" target=3D"_blank">Site Reliability =
+Engineers =97 Keeping Google up and running 24/7</a><br></div><div><br></di=
+v></span></div>
+
+
+</div><div>Let me know if they could be of interest and we could perhaps se=
+t up a call?</div><div><br></div><div>Regards,</div><div><br></div><div>Max=
+</div>-- <br><div dir=3D"ltr"><div><span style=3D"color:rgb(85,85,85);font-=
+family:sans-serif;font-size:small;line-height:19.5px;border-width:2px 0px 0=
+px;border-style:solid;border-color:rgb(213,15,37);padding-top:2px;margin-to=
+p:2px">Maximillian Piacentini=A0|</span><span style=3D"color:rgb(85,85,85);=
+font-family:sans-serif;font-size:small;line-height:19.5px;border-width:2px =
+0px 0px;border-style:solid;border-color:rgb(51,105,232);padding-top:2px;mar=
+gin-top:2px">=A0Technical Sourcer=A0|</span><span style=3D"color:rgb(85,85,=
+85);font-family:sans-serif;font-size:small;line-height:19.5px;border-width:=
+2px 0px 0px;border-style:solid;border-color:rgb(0,153,57);padding-top:2px;m=
+argin-top:2px">=A0<a href=3D"mailto:mpiacentini@google.com" target=3D"_blan=
+k">mpiacentini@google.com</a>=A0|</span><span style=3D"color:rgb(85,85,85);=
+font-family:sans-serif;line-height:19.5px;border-width:2px 0px 0px;border-s=
+tyle:solid;border-color:rgb(238,178,17);padding-top:2px;margin-top:2px">=A0=
+</span><span style=3D"color:rgb(51,51,51);font-family:Arial,Helvetica,sans-=
+serif;font-weight:bold;line-height:18px"><a href=3D"tel:%2B353%201%20519%20=
+7645" value=3D"+35315197645" target=3D"_blank">+353 1 519 7645</a></span><b=
+r>
+
+
+</div><div><div style=3D"font-size:13px;margin-bottom:0px;margin-left:0px;p=
+adding-bottom:5px"><div style=3D"overflow:hidden"><div dir=3D"ltr"><div><di=
+v dir=3D"ltr"><div><div dir=3D"ltr"><font color=3D"#888888"><br></font></di=
+v></div>
+
+
+</div></div><div><span style=3D"font-family:tahoma,sans-serif">Technical St=
+affing Google</span><br></div><div><div><div><font face=3D"tahoma, sans-ser=
+if">Google Ireland Ltd.,1 Grand Canal Plaza, Lower Grand Canal Street, Dubl=
+in 4, Ireland<br>
+
+
+Registered in Dublin, Ireland<br>Registration Number: 368047</font></div><d=
+iv><font face=3D"tahoma, sans-serif"><a href=3D"http://ie.linkedin.com/pub/=
+maximillian-piacentini/7/b2/ab5/" target=3D"_blank">Join me on Linkedin</a>=
+<br>
+
+
+</font><div style=3D"color:rgb(136,136,136)"><a href=3D"https://www.youtube=
+.com/watch?feature=3Dplayer_embedded&amp;v=3DocuqL_dhrBI" target=3D"_blank"=
+><br><img src=3D"http://www.google.com/logos/2010/buckyball10-hp.gif" width=
+=3D"96" height=3D"33" style=3D"color:rgb(80,0,80);font-size:x-small"></a></=
+div>
+
+
+<div><br></div><span style=3D"color:rgb(17,85,204);font-family:Arial;white-=
+space:pre-wrap"></span></div></div></div><div><br></div><div><a href=3D"htt=
+ps://www.youtube.com/watch?v=3Dzrb6edmE5Kg&amp;feature=3Dplayer_embedded" s=
+tyle=3D"font-size:12.727272033691406px" target=3D"_blank">Working at Google=
+, Dublin Ireland</a></div>
+
+
+<div><a href=3D"http://www.home-designing.com/2013/02/googles-new-office-in=
+-dublin" style=3D"font-family:arial,helvetica,sans-serif" target=3D"_blank"=
+>Google=92s New Office In Dublin</a><br><div style=3D"font-size:12.72727203=
+3691406px">
+
+
+<span style=3D"border-collapse:collapse"><div><a href=3D"http://www.youtube=
+.com/watch?v=3D9-RoxxBE2Zg" target=3D"_blank"><font color=3D"#1155cc">W</fo=
+nt>orking at Google, London UK.</a></div><div><a href=3D"http://www.youtube=
+.com/watch?v=3DE7PQJBii4DQ" target=3D"_blank"><font color=3D"#1155cc">W</fo=
+nt>orking at Google, Munich Germany.</a><br>
+
+
+</div><div><a href=3D"http://www.youtube.com/watch?v=3DPjf2Qk_aI2M" target=
+=3D"_blank">Working at Google, Zurich Switzerland.</a></div></span></div></=
+div></div><div></div></div></div><div style=3D"font-size:medium"><div><div>=
+<div style=3D"font-size:13px">
+
+
+<div><img src=3D"https://ssl.gstatic.com/apps/gadgets/youtube/youtube.gif" =
+width=3D"16" height=3D"16"><span>YouTube</span><span>=A0- Videos from this =
+email</span></div><div></div></div><div></div></div></div></div></div></div=
+>
+</div>
+<br></div></div><div class=3D"gmail_extra"><br><br><div class=3D"gmail_quot=
+e">On Tue, Oct 8, 2013 at 10:16 PM, Vincent Caron <span dir=3D"ltr">&lt;<a =
+href=3D"mailto:vincent@zerodeux.net" target=3D"_blank">vincent@zerodeux.net=
+</a>&gt;</span> wrote:<br>
+
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">On 30/09/2013 11:17, Maximilian Piacentini w=
+rote:<br>
+&gt; Hi Vincent,<br>
+&gt;<br>
+&gt; I previously sent an email to you with regards to opportunities at<br>
+&gt; Google and was unsure if you did not receive it due to overactive spam=
+<br>
+&gt; filters!<br>
+&gt;<br>
+&gt; I am reaching out again in case you missed the email and were keen to<=
+br>
+&gt; have an initial conversation regarding opportunities for our engineeri=
+ng<br>
+&gt; team.<br>
+<br>
+Hello,<br>
+<br>
+=A0 your email did fell in my spam trap, I just found it during my weekly<b=
+r>
+spam triaging...<br>
+<br>
+=A0 I&#39;m currently employed, but still curious about the kind of<br>
+opportunity you would like to talk about.<br>
+<br>
+=A0 Sincerely,<br>
+<br>
+=A0 Vincent<br>
+</blockquote></div><br><br clear=3D"all"><div><br></div>-- <br><div dir=3D"=
+ltr"><div><span style=3D"color:rgb(85,85,85);font-family:sans-serif;font-si=
+ze:small;line-height:19.5px;border-width:2px 0px 0px;border-style:solid;bor=
+der-color:rgb(213,15,37);padding-top:2px;margin-top:2px">Maximillian Piacen=
+tini=A0|</span><span style=3D"color:rgb(85,85,85);font-family:sans-serif;fo=
+nt-size:small;line-height:19.5px;border-width:2px 0px 0px;border-style:soli=
+d;border-color:rgb(51,105,232);padding-top:2px;margin-top:2px">=A0Technical=
+ Sourcer=A0|</span><span style=3D"color:rgb(85,85,85);font-family:sans-seri=
+f;font-size:small;line-height:19.5px;border-width:2px 0px 0px;border-style:=
+solid;border-color:rgb(0,153,57);padding-top:2px;margin-top:2px">=A0<a href=
+=3D"mailto:mpiacentini@google.com" target=3D"_blank">mpiacentini@google.com=
+</a>=A0|</span><span style=3D"color:rgb(85,85,85);font-family:sans-serif;li=
+ne-height:19.5px;border-width:2px 0px 0px;border-style:solid;border-color:r=
+gb(238,178,17);padding-top:2px;margin-top:2px">=A0</span><span style=3D"col=
+or:rgb(51,51,51);font-family:Arial,Helvetica,sans-serif;font-weight:bold;li=
+ne-height:18px">+353 1 519 7645</span><br>
+
+</div><div><div style=3D"font-size:13px;margin-bottom:0px;margin-left:0px;p=
+adding-bottom:5px"><div style=3D"overflow:hidden"><div dir=3D"ltr"><div><di=
+v dir=3D"ltr"><div><div dir=3D"ltr"><font color=3D"#888888"><br></font></di=
+v></div>
+
+</div></div><div><span style=3D"font-family:tahoma,sans-serif">Technical St=
+affing Google</span><br></div><div><div><div><font face=3D"tahoma, sans-ser=
+if">Google Ireland Ltd.,1 Grand Canal Plaza, Lower Grand Canal Street, Dubl=
+in 4, Ireland<br>
+
+Registered in Dublin, Ireland<br>Registration Number: 368047</font></div><d=
+iv><font face=3D"tahoma, sans-serif"><a href=3D"http://ie.linkedin.com/pub/=
+maximillian-piacentini/7/b2/ab5/" target=3D"_blank">Join me on Linkedin</a>=
+<br>
+
+</font><div style=3D"color:rgb(136,136,136)"><a href=3D"https://www.youtube=
+.com/watch?feature=3Dplayer_embedded&amp;v=3DocuqL_dhrBI" target=3D"_blank"=
+><br><img src=3D"http://www.google.com/logos/2010/buckyball10-hp.gif" width=
+=3D"96" height=3D"33" style=3D"color:rgb(80,0,80);font-size:x-small"></a></=
+div>
+
+<div><br></div><span style=3D"color:rgb(17,85,204);font-family:Arial;white-=
+space:pre-wrap"></span></div></div></div><div><br></div><div><a href=3D"htt=
+ps://www.youtube.com/watch?v=3Dzrb6edmE5Kg&amp;feature=3Dplayer_embedded" s=
+tyle=3D"font-size:12.727272033691406px" target=3D"_blank">Working at Google=
+, Dublin Ireland</a></div>
+
+<div><a href=3D"http://www.home-designing.com/2013/02/googles-new-office-in=
+-dublin" style=3D"font-family:arial,helvetica,sans-serif" target=3D"_blank"=
+>Google=92s New Office In Dublin</a><br><div style=3D"font-size:12.72727203=
+3691406px">
+
+<span style=3D"border-collapse:collapse"><div><a href=3D"http://www.youtube=
+.com/watch?v=3D9-RoxxBE2Zg" target=3D"_blank"><font color=3D"#1155cc">W</fo=
+nt>orking at Google, London UK.</a></div><div><a href=3D"http://www.youtube=
+.com/watch?v=3DE7PQJBii4DQ" target=3D"_blank"><font color=3D"#1155cc">W</fo=
+nt>orking at Google, Munich Germany.</a><br>
+
+</div><div><a href=3D"http://www.youtube.com/watch?v=3DPjf2Qk_aI2M" target=
+=3D"_blank">Working at Google, Zurich Switzerland.</a></div></span></div></=
+div></div><div></div></div></div><div style=3D"font-size:medium"><div><div>=
+<div style=3D"font-size:13px">
+
+<div><img src=3D"https://ssl.gstatic.com/apps/gadgets/youtube/youtube.gif" =
+width=3D"16" height=3D"16"><span>YouTube</span><span>=A0- Videos from this =
+email</span></div><div></div></div><div></div></div></div></div></div></div=
+>
+</div>
+
+--089e0160bc92140d3004e841f3f4--
