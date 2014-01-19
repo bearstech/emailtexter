@@ -1,0 +1,47 @@
+#!/usr/bin/perl
+
+# Email::Texter - extract essentials from verbose emails
+# Copyright (C) 2014 Bearstech
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+# Debian deps: libwww-perl libemail-mime libhtml-strip-perl
+use strict;
+use warnings;
+use Email::Texter;
+use LWP::UserAgent;
+use HTTP::Request::Common qw(POST);
+
+if (@ARGV < 2) {
+  print STDERR "Usage: $0 http://redmine-host/mail_handler mail-ws-key\n";
+  exit 1.
+}
+my $url = shift @ARGV;
+my $key = shift @ARGV;
+
+# Slurp email from stdin
+my $source = do { local $/; <STDIN> };
+my $email = Email::MIME->new($source);
+
+# Texterize email
+email_texter($email);
+
+# Post to Redmine's incoming email webservice
+my $ua = LWP::UserAgent->new();
+my $req = POST $url, [ key => $key, email => $email->as_string ];
+my $res = $ua->request($req);
+if (not $res->is_success) {
+  print STDERR $res->status_line;
+  exit 2;
+}
