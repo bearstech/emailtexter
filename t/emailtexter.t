@@ -24,10 +24,9 @@ sub test {
   ok( @text_parts == 1, 'has exactly one text part');
   
   (my $outname = $name) =~ s/\.eml$/.txt/;
-  # DOS and protocol \r's and missing newline at EOF produce bogus deltas
   my $out = read_file($outname);
-  my $text = $text_parts[0]->body_str; $text =~ s/\r//gs; $text .= "\n";
-  ok( $text eq $out, 'text part content is as expected') or print STDERR diff(\$out, \$text);
+  my $text = $text_parts[0]->body_str;
+  ok( $text eq $out, "$name: text part content is as expected") or print STDERR diff(\$out, \$text);
 }
 
 my @tests = glob('t/*.eml');

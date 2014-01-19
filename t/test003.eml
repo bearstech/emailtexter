@@ -1,0 +1,22 @@
+Date: Thu, 09 Jan 2014 19:08:15 +0100
+From: bob@test.com
+To: alice@test.com
+Subject: Top posting (text)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ascii
+
+This email looks like top-posting and it's baaad. Most of the time
+what's quoted below is not needed as a context, especially when the
+email is to be fed to a ticketing system and inserted to an existing
+ticket - which is the very purpose of emailtexter (email to ticket
+gateway).
+
+Some people wrote :
+> 
+> We shoud do something about the thing.
+>
+> Thx.
+
+--
+LoL Signature
+

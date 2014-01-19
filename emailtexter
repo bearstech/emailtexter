@@ -10,6 +10,6 @@ use open ':locale';
 my $source = do { local $/; <STDIN> };
 my $email = Email::MIME->new($source);
 
-print "Email in :\n", $email->debug_structure, "\n";
 email_texter($email);
-print "Email out:\n", $email->debug_structure;
+my @text_parts = grep { defined $_->content_type and $_->content_type =~ m:^text/plain;?: } $email->parts;
+print $text_parts[0]->body_str if @text_parts;

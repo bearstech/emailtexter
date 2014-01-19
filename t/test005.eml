@@ -1,0 +1,23 @@
+Date: Thu, 09 Jan 2014 19:08:15 +0100
+From: bob@test.com
+To: alice@test.com
+Subject: Crude HTML, basic paragraphs and newlines
+MIME-Version: 1.0
+Content-Type: text/html; charset=ascii
+
+<html>
+<body>
+This is very awful HTML, with no doctype and lack of paragraph tags ...
+<br>
+One linebreak further.
+<br>
+<br>
+Two linebreaks further.
+<br>
+<br>
+<br>
+Three linebreaks further.
+<p><p>
+<p>One empty paragraph further</p>
+</body>
+</html>

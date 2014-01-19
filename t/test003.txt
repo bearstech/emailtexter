@@ -1,0 +1,5 @@
+This email looks like top-posting and it's baaad. Most of the time
+what's quoted below is not needed as a context, especially when the
+email is to be fed to a ticketing system and inserted to an existing
+ticket - which is the very purpose of emailtexter (email to ticket
+gateway).
