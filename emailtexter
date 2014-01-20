@@ -19,15 +19,13 @@
 # This is a simple program which invokes Email::Texter. Feed it an email to its
 # stdin and it will show you the source of the texterized email.
 
-# Debian deps: libemail-mime libhtml-strip-perl
 use strict;
 use warnings;
 use Email::Texter;
-use open ':locale';
 
 # Slurp email from stdin
 my $source = do { local $/; <STDIN> };
-my $email = Email::MIME->new($source);
 
+my $email = Email::MIME->new($source);
 email_texter($email);
 print $email->as_string;
