@@ -56,7 +56,7 @@ if (defined $html) {
 }
 
 # Post to Redmine's incoming email webservice
-my $ua = LWP::UserAgent->new();
+my $ua = LWP::UserAgent->new(ssl_opts => {verify_hostname => 0});
 my $req = POST $url, [ key => $key, email => $email->as_string ];
 my $res = $ua->request($req);
 if (not $res->is_success) {
