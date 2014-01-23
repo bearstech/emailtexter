@@ -20,13 +20,16 @@
 use strict;
 use warnings;
 use Email::Texter;
+use HTML::Entities;
 use LWP::UserAgent;
 use HTTP::Request::Common qw(POST);
 
 if (@ARGV < 2) {
-  print STDERR "Usage: $0 http://redmine-host/mail_handler mail-ws-key\n";
+  print STDERR "Usage: $0 [--html] http://redmine-host/mail_handler mail-ws-key\n";
   exit 1.
 }
+my $html;
+$html = 1, shift @ARGV if $ARGV[0] eq '--html';
 my $url = shift @ARGV;
 my $key = shift @ARGV;
 
@@ -36,6 +39,21 @@ my $email = Email::MIME->new($source);
 
 # Texterize email
 email_texter($email);
+
+# Post-process line-breaks and paragraphs for the --html option
+# (this mode turned out to be mandatory if you use the CKEditor
+# plugin which expects HTML as text source [sic])
+if (defined $html) {
+  my @text_parts = grep { defined $_->content_type and $_->content_type =~ m:^text/plain;?: } $email->parts;
+  my $text = $text_parts[0]->body_str;
+  my $html = '';
+  foreach (split (/\n{2,}/, $text)) {
+    my $p = encode_entities($_);
+    $p =~ s:\n(.):<br/>\n$1:g;
+    $html .= "<p>$p</p>\n\n";
+  }
+  $text_parts[0]->body_str_set($html);  # Yes, HTML stuff in a text/plain part, stupid hack for stupid software
+}
 
 # Post to Redmine's incoming email webservice
 my $ua = LWP::UserAgent->new();
