@@ -13,3 +13,5 @@ This Perl module implement cruds hacks/heuristics to help mail-to-ticket gateway
 It parses the incoming email with Email::MIME, only add/modify/delete text or HTML MIME parts, and preserve everything else (attachments and so on).
 
 Right now it will always output UTF-8 encoded text, whatever was the incoming text charset.
+
+Debian dependencies : libfile-slurp-perl libemail-mime-perl (build/test: libtext-diff-perl)

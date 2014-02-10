@@ -23,7 +23,7 @@ use Exporter 'import';
 @EXPORT = qw/ email_texter /;
 
 sub email_texter {
-  my $email = shift;
+  my ($email, %args) = @_;
 
   my $text;
   my $html;
@@ -40,9 +40,9 @@ sub email_texter {
   # an email has both text+HTML as multipart/alternative, because it's more
   # structured and it's easier to remove signatures and quotes
   if (defined $html) {
-    # Strip known signature blogs while it's easy
-    $html =~ s:<pre class="moz-signature".*::s;                       # Thunderbird
-    $html =~ s:<div class="gmail_quote">.*?\n</blockquote></div>::sg; # Gmail
+    # HTML::Parser does not emit 'end's for well known non-closing tags, very annoying
+    # for the event-based traversal. We fix this with <br> -> <br/> crude transforms.
+    $html =~ s:<\s*(br|hr)\s*>:<$1/>:ig;
  
     my @ts;        # tag stack
     my $trim = 0;  # we trim an HTML subtree if $trim > 0
@@ -54,32 +54,42 @@ sub email_texter {
       text_h  => [ \&text_h, 'dtext' ],
       end_h   => [ \&end_h ],
     );
+    $p->empty_element_tags(1);
+    $p->ignore_elements(qw(script style));
+
     sub start_h {
       my ($name, $attr) = @_;
       push(@ts, $name);
-      print STDERR "TAG: ", join(' ', @ts), " > ", join(' ', map { "$_='$attr->{$_}'" } keys %$attr), "\n" if defined $ENV{debug};
-      if ($name eq 'div' and $attr->{class} eq 'gmail_quote') {
+      print STDERR "$trim TAG: ", join(' ', @ts), " > ", join(' ', map { "$_='$attr->{$_}'" } keys %$attr), "\n" if defined $ENV{DEBUG};
+
+      if (($name eq 'div' and $attr->{class} =~ /^gmail_quote|moz-cite-prefix$/) ||
+          ($name eq 'blockquote' and $attr->{type} eq 'cite')) {
         $trim++;
         push(@ts, '_trim_'); # Mark in the stack when we started trimming
-        print STDERR "$trim TRIM: ", join(' ', @ts), " > ", join(' ', map { "$_='$attr->{$_}'" } keys %$attr), "\n" if defined $ENV{debug};
+        print STDERR "$trim TRIM: ", join(' ', @ts), " > ", join(' ', map { "$_='$attr->{$_}'" } keys %$attr), "\n" if defined $ENV{DEBUG};
       }
       $$tt .= "\n\n" if $name eq 'br' and not $trim;
     }
+
     sub text_h {
       my ($t) = @_;
       my $ctx = $ts[-1];
-      print STDERR "$trim TEXT[$ctx]: $t\n" if defined $ENV{debug};
+      print STDERR "$trim TXT[$ctx] $t\n" if defined $ENV{DEBUG};
       return if $trim;
+
       $t =~ s/^\s+//;
       $t =~ s/\s+$//;
       $$tt .= $t;
       $$tt .= "\n\n" if $ctx =~ /^(div|p)$/;
     }
+
     sub end_h {
-      my $t = shift @ts;
+      my $t = pop @ts;
+      print STDERR "$trim ///  $t\n" if defined $ENV{DEBUG};
+
       if ($t eq '_trim_') {  # Stop trimming, we unrolled up to the corresponding closing tag
         $trim-- if $trim > 0;
-        shift @ts;
+        pop @ts;
       }
     }
     $p->parse($html);
@@ -108,6 +118,9 @@ sub email_texter {
 
   # Make sure it ends with a single newline
   $text =~ s/\n*$/\n/;
+
+  # Run user-defined transform if defined
+  $text = $args{text_edit}->($text) if defined $args{text_edit};
 
   $text_part = Email::MIME->create(
     attributes => {
