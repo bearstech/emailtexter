@@ -22,17 +22,32 @@ use HTML::Parser;
 use Exporter 'import';
 @EXPORT = qw/ email_texter /;
 
+sub debug {
+  print STDERR @_, "\n" if defined $ENV{DEBUG};
+}
+
 sub email_texter {
   my ($email, %args) = @_;
+  debug "IN:\n", $email->debug_structure;
 
-  my $text;
-  my $html;
-  # Parse MIME parts from end to begin in order that the first ones take precedence
-  foreach (reverse $email->parts) {
-    my $type = $_->content_type;
-    $text = $_->body_str if $type =~ m:^text/plain;?: or $type eq '';
-    $html = $_->body_str if $type =~ m:^text/html;?:;
+  local $text;
+  local $html;
+  sub traverse_parts {
+    foreach (@_) {
+      my $type = $_->content_type;
+      debug "  checking part type: $type";
+      return traverse_parts(reverse $_->parts) if $type =~ m:multipart/:;
+
+      $text = $_->body_str if $type =~ m:^text/plain;?: or $type eq '';
+      $html = $_->body_str if $type =~ m:^text/html;?:;
+    }
   }
+
+  # Parse MIME parts from end to begin in order that the first ones take precedence.
+  traverse_parts(reverse $email->parts);
+  debug "Text part: ", defined $text ? length($text) : '-';
+  debug "HTML part: ", defined $html ? length($html) : '-';
+
   # No text or HTML MIME part found, we leave the email untouched
   return unless defined $text or defined $html;
  
@@ -60,13 +75,13 @@ sub email_texter {
     sub start_h {
       my ($name, $attr) = @_;
       push(@ts, $name);
-      print STDERR "$trim TAG: ", join(' ', @ts), " > ", join(' ', map { "$_='$attr->{$_}'" } keys %$attr), "\n" if defined $ENV{DEBUG};
+      debug "$trim TAG: ", join(' ', @ts), " > ", join(' ', map { "$_='$attr->{$_}'" } keys %$attr);
 
       if (($name eq 'div' and $attr->{class} =~ /^gmail_quote|moz-cite-prefix$/) ||
           ($name eq 'blockquote' and $attr->{type} eq 'cite')) {
         $trim++;
         push(@ts, '_trim_'); # Mark in the stack when we started trimming
-        print STDERR "$trim TRIM: ", join(' ', @ts), " > ", join(' ', map { "$_='$attr->{$_}'" } keys %$attr), "\n" if defined $ENV{DEBUG};
+        debug "$trim TRIM: ", join(' ', @ts), " > ", join(' ', map { "$_='$attr->{$_}'" } keys %$attr);
       }
       $$tt .= "\n\n" if $name eq 'br' and not $trim;
     }
@@ -74,7 +89,7 @@ sub email_texter {
     sub text_h {
       my ($t) = @_;
       my $ctx = $ts[-1];
-      print STDERR "$trim TXT[$ctx] $t\n" if defined $ENV{DEBUG};
+      debug "$trim TXT[$ctx] $t";
       return if $trim;
 
       $t =~ s/^\s+//;
@@ -85,7 +100,7 @@ sub email_texter {
 
     sub end_h {
       my $t = pop @ts;
-      print STDERR "$trim ///  $t\n" if defined $ENV{DEBUG};
+      debug "$trim ///  $t";
 
       if ($t eq '_trim_') {  # Stop trimming, we unrolled up to the corresponding closing tag
         $trim-- if $trim > 0;
@@ -109,15 +124,14 @@ sub email_texter {
   # Remove \r (nomalize on Unix mail format, easier for the next regexes)
   $text =~ s/\r//g;
 
-  # Strip leading and trailing blanks
-  $text =~ s/^\s+//;
-  $text =~ s/\s+$//;
- 
   # Do not allow more than one consecutive empty line
   $text =~ s/\n(\s*\n){2,}/\n\n/g;
 
+  # Strip any leading empty (or whitespaced) lines
+  $text =~ s/^(\s*\n)+//;
+
   # Make sure it ends with a single newline
-  $text =~ s/\n*$/\n/;
+  $text =~ s/(\s*\n)*$/\n/;
 
   # Run user-defined transform if defined
   $text = $args{text_edit}->($text) if defined $args{text_edit};
@@ -131,8 +145,40 @@ sub email_texter {
     body_str => $text
   );
 
-  my @newparts = ($text_part, grep { $_->content_type !~ m:^text/: } $email->parts);
-  $email->parts_set(\@newparts);
+  # We want to update the email while keepint its structure as much as possible.
+  # This is note easy with Email::MIME. Here this routine will blindly replace
+  # all text and HMTL parts with our modified text_part.
+  sub update_parts {
+    my ($this) = @_;
+    my @keep;
+    my $replaced = 0;
+
+    foreach ($this->parts) {
+      my $type = $_->content_type;
+
+      update_parts($_) if $type =~ m:multipart/:;  # We have to recurse, MIME is like that
+
+      if ($type =~ m:^text/: or $type eq '') {
+        # We might encounter 0, 1 or 2 text or HTML parts in this loop,
+        # thus we use $replaced to see if we replace or ignore (aka delete).
+        if (not $replaced) {
+          push(@keep, $text_part);
+          $replaced = 1;
+          debug "  updating part type '$type' with our modified text_part";
+        } else {
+          debug "  removing part type '$type'";
+        }
+      } else {
+        # We keep everything else (multiparts, attachments, etc.)
+        push(@keep, $_);
+        debug "  keeping  part type '$type'";
+      }
+    }
+    $this->parts_set(\@keep);
+  }
+
+  update_parts($email);
+  debug "OUT:\n", $email->debug_structure;
 }
 
 1;

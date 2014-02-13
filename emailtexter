@@ -21,11 +21,10 @@
 
 use strict;
 use warnings;
+use File::Slurp;
 use Email::Texter;
 
-# Slurp email from stdin
-my $source = do { local $/; <STDIN> };
-
-my $email = Email::MIME->new($source);
+my $in = read_file(\*STDIN);
+my $email = Email::MIME->new($in);
 email_texter($email);
 print $email->as_string;
