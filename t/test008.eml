@@ -1,0 +1,206 @@
+                                                                                                                                                                                                                                                               
+MIME-Version: 1.0
+Date: Mon, 20 Jan 2014 09:40:13 +0100
+Subject: Re: [Infrastructure - Evolution #6667] Test des emails entrants sur Redmine
+From: =?ISO-8859-1?Q?Fabien_Mani=E8re?= <fabien@test.com>
+To: ticketing@mail.test.com
+Cc: vcaron@bearstech.com, =?ISO-8859-1?Q?H=E9l=E8ne?= <helene@test.com>, 
+	=?ISO-8859-1?Q?Martin <martin@test.com>
+Content-Type: multipart/alternative; boundary=e89a8f923bce23305604f062d7b5
+
+--e89a8f923bce23305604f062d7b5
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Test de r=C3=A9ponse =C3=A0 partir d'un email.
+Ici un saut de ligne, et ici une fin de ligne.
+
+lorem ipsum dolor...
+
+*=E2=96=80=E2=96=80=E2=96=80=E2=96=80=E2=96=80=E2=96=80=E2=96=80=E2=96=80=
+=E2=96=80=E2=96=80=E2=96=80=E2=96=80=E2=96=80=E2=96=80=E2=96=80=E2=96=80=E2=
+=96=80=E2=96=80=E2=96=80=E2=96=80 **Fabien *
+om =E2=80=93 agence interactive
+fabien@test.com
+www.test.com
+<http://www.test.com>42 rue Saint-Pierre, 75099 PARIS
+t=C3=A9l. 01 02 03 04 05 / 06 07 08 09 10
+
+
+Le 20 janvier 2014 00:30, <ticketing@mail.test.com> a =C3=A9crit :
+
+>  [ - ]
+> La demande #6667 a =C3=A9t=C3=A9 mise =C3=A0 jour par Bearstech Support.
+>
+>
+> Simple r=C3=A9ponse textuelle ...
+> ------------------------------
+> Evolution #6667: Test des emails entrants sur Redmine<https://support.tes=
+t.com/issues/6667#change-18308>
+>
+>    - Auteur: Bearstech Support
+>    - Statut: En cours
+>    - Priorit=C3=A9: Normal
+>    - Assign=C3=A9 =C3=A0: Bearstech Support
+>    - Cat=C3=A9gorie:
+>    - Version cible:
+>
+>
+>
+> Ce ticket permet de v=C3=A9rifier le fonctionnement et l'effet du filtre =
+sur
+> les emails entrants bas=C3=A9 sur https://github.com/bearstech/emailtexte=
+r(d=C3=A9velopp=C3=A9 par Bearstech).
+>
+>
+> ------------------------------
+> Vous avez re=C3=A7u cet email par ce que vous travaillez sur un projet we=
+b a
+> om
+> Pour changer vos pr=C3=A9f=C3=A9rences, connectez vous sur la page mon co=
+mpte :
+> http://support.test.com/my/account
+>
+
+--e89a8f923bce23305604f062d7b5
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Test de r=C3=A9ponse =C3=A0 partir d&#39;un email.<div>Ici=
+ un saut de ligne, et ici une fin de ligne.<br><div class=3D"gmail_extra"><=
+br clear=3D"all"><div><div dir=3D"ltr"><div>lorem ipsum dolor...</div><div>=
+<br></div><span style=3D"font-family:Calibri;font-size:14px;border-collapse=
+:collapse;color:rgb(94,94,95)"><b><span style=3D"font-family:Helvetica;colo=
+r:rgb(0,0,0);font-weight:normal;font-size:medium"><div style=3D"margin-top:=
+0cm;margin-right:0cm;margin-bottom:0.0001pt;margin-left:0cm;font-size:12pt;=
+font-family:Cambria">
+<b><span lang=3D"FR" style=3D"font-family:Arial;color:rgb(103,180,57)"><fon=
+t size=3D"3"><span style=3D"font-size:12px"><font color=3D"#D9D22A"><span s=
+tyle=3D"color:rgb(0,0,0);font-family:Cambria;font-weight:normal;font-size:1=
+6px"><b><span lang=3D"FR" style=3D"font-family:Arial;color:rgb(103,180,57)"=
+><font size=3D"3"><span style=3D"font-size:12px"><font color=3D"#D9D22A">=
+=E2=96=80</font></span></font></span></b></span></font></span></font></span=
+></b><b><span lang=3D"FR" style=3D"font-family:Arial;color:rgb(103,180,57)"=
+><font size=3D"3"><span style=3D"font-size:12px"><font color=3D"#D9D22A">=
+=E2=96=80</font></span></font></span></b><b><span lang=3D"FR" style=3D"font=
+-family:Arial;color:rgb(103,180,57)"><font size=3D"3"><span style=3D"font-s=
+ize:12px"><font color=3D"#D9D22A">=E2=96=80</font></span></font></span></b>=
+<b><span lang=3D"FR" style=3D"font-family:Arial;color:rgb(103,180,57)"><fon=
+t size=3D"3"><span style=3D"font-size:12px"><font color=3D"#D9D22A">=E2=96=
+=80</font></span></font></span></b><b><span lang=3D"FR" style=3D"font-famil=
+y:Arial;color:rgb(103,180,57)"><font size=3D"3"><span style=3D"font-size:12=
+px"><font color=3D"#A7C645"><span style=3D"color:rgb(0,0,0);font-family:Cam=
+bria;font-weight:normal;font-size:16px"><b><span lang=3D"FR" style=3D"font-=
+family:Arial;color:rgb(103,180,57)"><font size=3D"3"><span style=3D"font-si=
+ze:12px"><font color=3D"#A7C645"><span style=3D"color:rgb(0,0,0);font-famil=
+y:Cambria;font-weight:normal;font-size:16px"><b><span lang=3D"FR" style=3D"=
+font-family:Arial;color:rgb(103,180,57)"><font size=3D"3"><span style=3D"fo=
+nt-size:12px"><font color=3D"#D9D22A">=E2=96=80</font></span></font></span>=
+</b></span>=E2=96=80</font></span></font></span></b></span></font></span></=
+font></span></b><b><span lang=3D"FR" style=3D"font-family:Arial;color:rgb(1=
+03,180,57)"><font size=3D"3"><span style=3D"font-size:12px"><font color=3D"=
+#A7C645">=E2=96=80</font></span></font></span></b><b><span lang=3D"FR" styl=
+e=3D"font-family:Arial;color:rgb(103,180,57)"><font size=3D"3"><span style=
+=3D"font-size:12px"><font color=3D"#A7C645">=E2=96=80</font></span></font><=
+/span></b><b><span lang=3D"FR" style=3D"font-family:Arial;color:rgb(103,180=
+,57)"><font size=3D"3"><span style=3D"font-size:12px"><font color=3D"#A7C64=
+5">=E2=96=80</font></span></font></span></b><b><span lang=3D"FR" style=3D"f=
+ont-family:Arial;color:rgb(103,180,57)"><font size=3D"3"><span style=3D"fon=
+t-size:12px"><span style=3D"color:rgb(0,0,0);font-family:Cambria;font-weigh=
+t:normal;font-size:16px"><b><span lang=3D"FR" style=3D"font-family:Arial;co=
+lor:rgb(103,180,57)"><font size=3D"3"><span style=3D"font-size:12px"><span =
+style=3D"color:rgb(0,0,0);font-family:Cambria;font-weight:normal;font-size:=
+16px"><b><span lang=3D"FR" style=3D"font-family:Arial;color:rgb(103,180,57)=
+"><font size=3D"3"><span style=3D"font-size:12px"><font color=3D"#A7C645">=
+=E2=96=80</font></span></font></span></b></span>=E2=96=80</span></font></sp=
+an></b></span></span></font></span></b><b><span lang=3D"FR" style=3D"font-f=
+amily:Arial;color:rgb(103,180,57)"><font size=3D"3"><span style=3D"font-siz=
+e:12px">=E2=96=80</span></font></span></b><b><span lang=3D"FR" style=3D"fon=
+t-family:Arial;color:rgb(103,180,57)"><font size=3D"3"><span style=3D"font-=
+size:12px">=E2=96=80</span></font></span></b><b><span lang=3D"FR" style=3D"=
+font-family:Arial;color:rgb(103,180,57)"><font size=3D"3"><span style=3D"fo=
+nt-size:12px">=E2=96=80</span></font></span></b><b><span lang=3D"FR" style=
+=3D"font-family:Arial;color:rgb(103,180,57)"><font size=3D"3"><span style=
+=3D"font-size:12px"><font color=3D"#B3BF53"><span style=3D"color:rgb(0,0,0)=
+;font-family:Cambria;font-weight:normal;font-size:16px"><b><span lang=3D"FR=
+" style=3D"font-family:Arial;color:rgb(103,180,57)"><font size=3D"3"><span =
+style=3D"font-size:12px"><font color=3D"#B3BF53"><span style=3D"color:rgb(0=
+,0,0);font-family:Cambria;font-weight:normal;font-size:16px"><b><span lang=
+=3D"FR" style=3D"font-family:Arial;color:rgb(103,180,57)"><font size=3D"3">=
+<span style=3D"font-size:12px">=E2=96=80</span></font></span></b></span>=E2=
+=96=80</font></span></font></span></b></span></font></span></font></span></=
+b><b><span lang=3D"FR" style=3D"font-family:Arial;color:rgb(103,180,57)"><f=
+ont size=3D"3"><span style=3D"font-size:12px"><font color=3D"#B3BF53">=E2=
+=96=80</font></span></font></span></b><b><span lang=3D"FR" style=3D"font-fa=
+mily:Arial;color:rgb(103,180,57)"><font size=3D"3"><span style=3D"font-size=
+:12px"><font color=3D"#B3BF53">=E2=96=80</font></span></font></span></b><b>=
+<span lang=3D"FR" style=3D"font-family:Arial;color:rgb(103,180,57)"><font s=
+ize=3D"3"><span style=3D"font-size:12px"><font color=3D"#B3BF53">=E2=96=80<=
+/font></span></font></span></b><b><span lang=3D"FR" style=3D"font-family:Ar=
+ial;color:rgb(103,180,57)"><font size=3D"3"><span style=3D"font-size:12px">=
+<font color=3D"#B3BF53">=E2=96=80</font></span></font></span></b><b><span l=
+ang=3D"FR" style=3D"font-family:Arial;color:rgb(76,75,76)"><font size=3D"3"=
+><span style=3D"font-size:12px">=C2=A0</span></font></span></b></div>
+</span></b></span><span style=3D"font-family:Arial;font-size:11px;color:rgb=
+(68,68,68)"><strong style=3D"font-size:12px">Fabien =C2=A0</strong><=
+br>om =E2=80=93 agence interactive<br><a href=3D"mailto:fabien@=
+test.com" target=3D"_blank">fabien@test.com</a><br>
+<a href=3D"http://www.test.com" target=3D"_blank">www.test.com</a=
+></span><div><font color=3D"#444444" face=3D"Arial"><span style=3D"font-siz=
+e:11px"><a href=3D"http://www.test.com" target=3D"_blank"></a>42 rue S=
+aint-Pierre, 75099 PARIS</span></font><br>
+<font color=3D"#444444" face=3D"Arial"><span style=3D"font-size:11px">t=C3=
+=A9l.=C2=A001 02 03 04 05 / 06 07 08 09 10</span></font></div></div></div>
+<br><br><div class=3D"gmail_quote">Le 20 janvier 2014 00:30,  <span dir=3D"=
+ltr">&lt;<a href=3D"mailto:ticketing@mail.test.com" target=3D"_blank">=
+ticketing@mail.test.com</a>&gt;</span> a =C3=A9crit :<br><blockquote c=
+lass=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;=
+padding-left:1ex">
+
+
+
+
+<div><div class=3D"im">
+<span>[ - ]
+<br></span>
+La demande #6667 a =C3=A9t=C3=A9 mise =C3=A0 jour par Bearstech Support.
+
+<ul>
+</ul></div>
+
+Simple r=C3=A9ponse textuelle ...
+<div class=3D"im"><hr>
+<h1><a href=3D"https://support.test.com/issues/6667#change-18308" targ=
+et=3D"_blank">Evolution #6667: Test des emails entrants sur Redmine</a></h1=
+>
+
+<ul><li>Auteur: Bearstech Support</li>
+<li>Statut: En cours</li>
+<li>Priorit=C3=A9: Normal</li>
+<li>Assign=C3=A9 =C3=A0: Bearstech Support</li>
+<li>Cat=C3=A9gorie: </li>
+<li>Version cible: </li></ul>
+
+<p>=C2=A0</p>
+
+<p>Ce ticket permet de v=C3=A9rifier le fonctionnement et l&#39;effet du fi=
+ltre sur les emails entrants bas=C3=A9 sur=C2=A0<a href=3D"https://github.c=
+om/bearstech/emailtexter" target=3D"_blank">https://github.com/bearstech/em=
+ailtexter</a> (d=C3=A9velopp=C3=A9 par Bearstech).</p>
+
+
+<p>=C2=A0</p>
+
+
+
+<hr>
+<span>Vous avez re=C3=A7u cet email par ce que vous travaillez sur un proje=
+t web is&amp;a bloom
+<br>Pour changer vos pr=C3=A9f=C3=A9rences, connectez vous sur la page mon =
+compte : <a href=3D"http://support.test.com/my/account" target=3D"_bla=
+nk">http://support.test.com/my/account</a></span>
+</div></div>
+
+</blockquote></div><br></div></div></div>
+
+--e89a8f923bce23305604f062d7b5--

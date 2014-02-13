@@ -1,0 +1,15 @@
+Test de réponse à partir d'un email.
+
+Ici un saut de ligne, et ici une fin de ligne.
+
+lorem ipsum dolor...
+
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀Fabien
+
+om – agence interactive
+
+fabien@test.com
+
+www.test.com42 rue Saint-Pierre, 75099 PARIS
+
+tél. 01 02 03 04 05 / 06 07 08 09 10
