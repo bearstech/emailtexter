@@ -35,6 +35,7 @@ my $key = shift @ARGV;
 # Slurp email from stdin
 my $source = do { local $/; <STDIN> };
 my $email = Email::MIME->new($source);
+$email->charset_set('UTF-8');
 
 # Texterize email - more or less
 $html ? email_texter($email, text_edit => \&htmlizer) : email_texter($email);
@@ -53,6 +54,8 @@ sub htmlizer {
   }
   $html;  # Yes, HTML stuff in a text/plain part
 }
+#open(my $fi, ">/tmp/email.in");  print $fi $source; close($fi);
+#open(my $fo, ">/tmp/email.out"); print $fo $email->as_string; close($fo);
 
 # Post to Redmine's incoming email webservice
 my $ua = LWP::UserAgent->new(ssl_opts => {verify_hostname => 0});
